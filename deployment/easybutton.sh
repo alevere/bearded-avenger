@@ -65,10 +65,15 @@ case $OS in
         echo "We accept Pull Requests! =)"
         exit 1;;
 
-    "Redhat" )
-        echo 'Redhat not yet supported...'
-        echo "We accept Pull Requests! =)"
-        exit 1;;
+    "Linux" )
+        if [ $VER == '3.10.0-514.6.2.el7.x86_64' ]; then
+           cd centos7
+           bash bootstrap.sh
+        else
+           echo 'Redhat not yet supported...'
+           echo "We accept Pull Requests! =)"
+        fi
+        ;;
 
     "CentOS Linux" )
         if [ $VER == '7' ]; then
