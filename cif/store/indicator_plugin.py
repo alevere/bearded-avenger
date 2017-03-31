@@ -23,8 +23,8 @@ class IndicatorManagerPlugin(object):
         if not i.get('group'):
             raise InvalidIndicator('missing group')
 
-        if i['group'] not in t['groups']:
-            raise AuthError('unable to write to %s' % i['group'])
+#        if i['group'] not in t['groups']:
+#            raise AuthError('unable to write to %s' % i['group'])
 
     def _timestamps_fix(self, i):
         if not i.get('lasttime'):
