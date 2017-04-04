@@ -12,10 +12,10 @@ server {
 
         ssl_session_timeout  5m;
 
-        ssl_protocols  TLSv1.2 TLSv1;
-        ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+        ssl_protocols  TLSv1.2 TLSv1 TLSv1.1;
+        ssl_ciphers EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH;
         ssl_prefer_server_ciphers   on;
-
+        
         root /usr/share/nginx/html;
         index index.html index.htm;
 
